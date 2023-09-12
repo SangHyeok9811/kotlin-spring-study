@@ -32,7 +32,7 @@ dependencies {
 	// spring-data-jdbc
 	// application.properties
 	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-jdbc
-	// implementation("org.springframework.data:spring-data-jdbc:3.1.3")
+	//	implementation("org.springframework.data:spring-data-jdbc:3.1.3")
 
 	// expose 의존성
 	implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
@@ -49,6 +49,9 @@ dependencies {
 	// spring transaction 호환, @Transaction
 	// 스프링 트랜잭션 매니저를 안 써야 더 디테일한 처리를 할 수 있음.
 	implementation("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
+
+	implementation("com.auth0:java-jwt:4.4.0")
+	implementation("at.favre.lib:bcrypt:0.10.2")
 }
 
 tasks.withType<KotlinCompile> {

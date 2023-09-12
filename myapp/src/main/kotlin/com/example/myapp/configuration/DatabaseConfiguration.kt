@@ -11,13 +11,12 @@ import javax.sql.DataSource
 
 @Configuration
 class DatabaseConfiguration (val dataSource: DataSource) {
-        @Bean
-        fun databaseConfig() : DatabaseConfig {
-            return DatabaseConfig {useNestedTransactions = true}
-        }
-
-        @Bean
-        fun database(): Database {
-            return Database.connect(dataSource)
-        }
+    @Bean
+    fun databaseConfig() : DatabaseConfig {
+        return DatabaseConfig { useNestedTransactions = true }
+    }
+    @Bean
+    fun database(): Database {
+        return Database.connect(dataSource)
+    }
 }
